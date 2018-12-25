@@ -1,0 +1,14 @@
+body {
+  margin : 0;
+  background-color: #000;
+  height : 100vh;
+  display: table;
+}
+div {
+  display: table-cell;
+  vertical-align: middle;
+}
+video {
+  width: 100%;
+  height: auto;
+}
