@@ -86,6 +86,9 @@ p a {
 #lollipop:before {
   background-image: url('build/lollipop.png');
 }
+#saugy:before {
+  background-image: url('build/saugy.png');
+}
 
 /* Fancybox */
 .fancybox-caption {

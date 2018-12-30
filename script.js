@@ -41,4 +41,14 @@ $(document).ready(function(){
 			}
 		});
   });
+
+	$("#saugy").click(function(){
+		$.fancybox.open({
+			src  : 'build/saugy.png',
+			type : 'image',
+			opts : {
+				caption : '<a href="src/saugy.svg">.svg source</a>'
+			}
+		});
+  });
 });
