@@ -1,14 +1,96 @@
 body {
-  margin : 0;
-  background-color: #000;
-  height : 100vh;
-  display: table;
+  margin: 0;
+  background: -moz-radial-gradient(center, ellipse cover, #1c1c1c 0%, #000000 100%); /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover, #1c1c1c 0%,#000000 100%); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, #1c1c1c 0%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  color : #fff;
+  font-family: 'Comfortaa', sans;
 }
-div {
-  display: table-cell;
-  vertical-align: middle;
+
+/* Grid layout */
+.flex {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
 }
-video {
-  width: 100%;
-  height: auto;
+.flex .column {
+  flex: 1;
+}
+.flex .cell {
+  height: 40vh;
+  text-align: center;
+  cursor: pointer;
+  margin: 5vh;
+}
+
+/* Hover title */
+h2 {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+p a {
+  color : white;
+  z-index: 99;
+}
+
+/* Animation */
+.hover-anim:hover::before {
+  filter: brightness(50%);
+}
+.hover-anim h2 {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.hover-anim:hover h2 {
+  opacity: 100;
+}
+.hover-anim p {
+  opacity: 0%;
+  transition: 0.3s;
+}
+.hover-anim:hover p {
+  opacity: 100%;
+}
+
+/* Background image */
+.cell {
+  position: relative;
+}
+.cell:before {
+  background-size : contain;
+  background-position : center;
+  background-repeat: no-repeat;
+  content : "";
+  display: block;
+  position: absolute;
+  z-index : 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom : 0;
+}
+#hana:before {
+  background-image: url('build/hana.png');
+}
+#glitch:before {
+  background-image: url('build/glitch.png');
+}
+#lollipop:before {
+  background-image: url('build/lollipop.png');
+}
+
+/* Fancybox */
+.fancybox-caption {
+  font-size: 1.3rem !important;
+}
+.fancybox-bg {
+    background: #050505 !important;
 }
